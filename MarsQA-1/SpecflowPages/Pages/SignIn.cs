@@ -11,14 +11,14 @@ namespace MarsQA_1.Pages
         private static IWebElement Password => Driver.driver.FindElement(By.XPath("//INPUT[@type='password']"));
         private static IWebElement LoginBtn => Driver.driver.FindElement(By.XPath("//BUTTON[@class='fluid ui teal button'][text()='Login']"));
         public static void SigninStep()
-        {
-            Driver.NavigateUrl();
+        {    
+            Driver.NavigateUrl();             
             SignInBtn.Click();
             Email.SendKeys(ExcelLibHelper.ReadData(2,"username"));
             Password.SendKeys(ExcelLibHelper.ReadData(2, "password"));
             LoginBtn.Click();
         }
-        public static void Login()
+        public static void Login()           
         {
             Driver.NavigateUrl();
 
